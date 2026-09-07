@@ -1,9 +1,16 @@
 class Solution {
 public:
     bool isPowerOfTwo(int n) {
-        for(int x = 0; x <= 30; x++){
-            if(n == pow(2, x)){
+        if(n <= 0){
+            return false;
+        }
+        long long x = 1;
+        while(x <= n){
+            if(x == n){
                 return true;
+            }
+            else{
+                x = x * 2;
             }
         }
         return false;
