@@ -12,15 +12,18 @@ public:
         ListNode* a = headA;
         ListNode* b = headB;
         while (a != b) {
-            if (a == nullptr)
+            if (a == nullptr){
                 a = headB;
-            else
+            }
+            else{
                 a = a->next;
-
-            if (b == nullptr)
+            }
+            if (b == nullptr){
                 b = headA;
-            else
+            }
+            else{
                 b = b->next;
+            }
         }
         return a;
     }
